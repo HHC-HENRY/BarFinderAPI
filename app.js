@@ -12,7 +12,7 @@ server.use(bodyParser.urlencoded({extended: true}));
 server.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 
-const PLACES_API_KEY = 'AIzaSyBXZjldwp85WJOMryPcR7hX5rMl-cLWj9c';
+const PLACES_API_KEY = 'AIzaSyCsDrx0q_PSYYBIx3xrKT0p0G53ETRG2OQ';
 var filteredResults;
 
 hbs.registerHelper('list', (items, options) => {
@@ -44,7 +44,7 @@ server.post('/getplaces',(req, res) => {
   const addr = req.body.address;
   const placetype = req.body.placetype;
   const name = req.body.name;
-  const locationReq =`https://maps.googleapis.com/maps/api/geocode/json?address=${addr}&key=AIzaSyBXZjldwp85WJOMryPcR7hX5rMl-cLWj9c`;
+  const locationReq =`https://maps.googleapis.com/maps/api/geocode/json?address=${addr}&key=AIzaSyAn7h3tsW_p0md5iISNFzLcJDoRGRgjWPg`;
   /*AIzaSyARTSq38TuS9s6hfivOnbfpKYBfNsI6CHI*/ /*AIzaSyD_nePGU31ZSVdcbND-DXc0srbzZFWGfac */
 
   axios.get(locationReq).then((response) => {
